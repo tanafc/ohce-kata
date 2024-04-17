@@ -1,10 +1,11 @@
-import { Ohce } from "./Ohce.js"
+import { LoggerConsole } from "./Logger.js"
+import { Ohce } from "./ohce.js"
 
 const name = process.argv.at(2)
 if (!name) throw Error("Name is required as argument")
 
-const ohce = new Ohce()
+const logger = new LoggerConsole()
 
-const result = ohce.execute(name)
+const ohce = new Ohce(logger)
 
-console.log(result)
+ohce.execute(name)

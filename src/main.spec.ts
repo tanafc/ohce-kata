@@ -1,13 +1,18 @@
-import { describe, expect, it } from "vitest"
-import { Ohce } from "./Ohce.js"
+import { describe, expect, it, vi } from "vitest"
+import { Ohce } from "./ohce.js"
+import { Logger } from "./Logger.js"
 
 describe("Ohce", () => {
   it("greets good morning between 6 and 12 hours", () => {
     const name = "Pedro"
-    const ohce = new Ohce()
+    const result = `¡Buenos días ${name}!`
+    const loggerSpy: Logger = {
+      log: vi.fn(() => result),
+    }
+    const ohce = new Ohce(loggerSpy)
 
-    const result = ohce.execute(name)
+    ohce.execute(name)
 
-    expect(result).toBe("¡Buenos días Pedro!")
+    expect(loggerSpy.log).toHaveBeenCalledWith(result)
   })
 })
