@@ -1,10 +1,12 @@
-// import { describe, expect, it } from "vitest"
-// import { myFunction } from "./main.js"
+import { describe, expect, it } from "vitest"
 
-// describe("Ohce", () => {
-//   it("greets good morning between 6 and 12 hours", () => {
-//     const result = myFunction()
+describe("Ohce", () => {
+  it("greets good morning between 6 and 12 hours", () => {
+    const name = "Pedro"
+    const ohce = new Ohce()
 
-//     expect(result).toBe(true)
-//   })
-// })
+    const result = ohce.execute(name)
+
+    expect(result).toBe("¡Buenos días Pedro!")
+  })
+})
