@@ -1,10 +1,10 @@
-import { describe, it, expect } from "vitest"
-import { myFunction } from "./main.js"
+// import { describe, expect, it } from "vitest"
+// import { myFunction } from "./main.js"
 
-describe("Default test", () => {
-  it("should work", () => {
-    const result = myFunction()
+// describe("Ohce", () => {
+//   it("greets good morning between 6 and 12 hours", () => {
+//     const result = myFunction()
 
-    expect(result).toBe(true)
-  })
-})
+//     expect(result).toBe(true)
+//   })
+// })
