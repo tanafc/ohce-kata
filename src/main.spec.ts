@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from "vitest"
-import { Ohce } from "./ohce.js"
+import { Ohce } from "./Ohce.js"
 import { Logger } from "./Logger.js"
 
 describe("Ohce", () => {
