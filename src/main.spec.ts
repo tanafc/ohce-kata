@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest"
+import { Ohce } from "./Ohce.js"
 
 describe("Ohce", () => {
   it("greets good morning between 6 and 12 hours", () => {
